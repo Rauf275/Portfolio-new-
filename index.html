@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="logo">Portfolio</div>
+
+  <ul>
+    <li><a href="#about" data-i18n="nav.about">About Me</a></li>
+    <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+    <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+    <li><a href="#cv" data-i18n="nav.cv">CV</a></li>
+    <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-controls">
+
+    <div class="lang-switch" id="langSwitch">
+      <button class="lang-btn" id="langBtn" onclick="toggleLangMenu(event)" aria-haspopup="true" aria-expanded="false" aria-label="Change language">
+          <circle cx="12" cy="12" r="9"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <ellipse cx="12" cy="12" rx="4" ry="9"/>
+        </svg>
+        <span id="langLabel">EN</span>
+      </button>
+
+      <div class="lang-menu" id="langMenu">
+        <button type="button" data-lang="en" onclick="setLanguage('en')">English</button>
+        <button type="button" data-lang="ru" onclick="setLanguage('ru')">Русский</button>
+        <button type="button" data-lang="az" onclick="setLanguage('az')">Azərbaycan</button>
+      </div>
+    </div>
+
+    <label class="theme-switch">
+      <input type="checkbox" id="themeToggle" onclick="toggleTheme()">
+
+      <span class="slider">
+        <span class="circle">
+
+          <svg class="icon sun" viewBox="0 0 24 24">
+            <path d="M12 18a6 6 0 1 1 0-12a6 6 0 0 1 0 12z"
+              stroke="currentColor" stroke-width="2" fill="none"/>
+          </svg>
+
+          <svg class="icon moon" viewBox="0 0 24 24">
+            <path d="M21 12.8A8.5 8.5 0 0 1 11.2 3a7 7 0 1 0 9.8 9.8z"
+              fill="currentColor"/>
+          </svg>
+
+        </span>
+      </span>
+    </label>
+
+  </div>
+
+</nav>
+
+<section class="hero">
+
+  <h1>
+    <span class="hero-text" data-i18n="hero.greeting">Hello, I am</span>
+    <span class="hero-name">Rauf Allahverdiyev</span>
+  </h1>
+
+  <div class="buttons">
+    <a href="#projects" class="btn" data-i18n="hero.btnProjects">My Projects</a>
+    <a href="#contact" class="btn secondary" data-i18n="hero.btnContact">Contact</a>
+  </div>
+
+</section>
+
+<section id="about">
+
+  <h2 data-i18n="about.title">About Me</h2>
+
+  <div class="card">
+    <p data-i18n="about.text">
+
+I am an IT enthusiast with knowledge of frontend development and IT support. I have practical skills in building responsive and user-friendly web interfaces using HTML, CSS, JavaScript, and Bootstrap, and I enjoy continuously improving my technical abilities through personal projects and hands-on experience.
+I also have knowledge based on the CompTIA A+ Core 1 and Core 2 objectives, including computer hardware, Windows operating systems, networking fundamentals, troubleshooting, and Help Desk support. I am familiar with configuring and managing network switches through the command-line interface using PuTTY, and I have a basic understanding of switch configuration, VLANs, and network connectivity.
+I am passionate about technology, enjoy solving technical problems, and am always looking for opportunities to expand my skills and gain practical experience in both frontend development and IT support. I believe that continuous learning is essential in the IT industry. I regularly improve my knowledge by building personal projects, studying modern technologies, and exploring new tools and best practices. I enjoy learning how systems work, solving technical challenges, and finding efficient solutions to real-world problems.
+My goal is to build a successful career in the IT industry, where I can apply my technical knowledge, continue developing my skills, and contribute to meaningful projects
+
+    </p>
+  </div>
+
+</section>
+
+<section id="skills">
+
+  <h2 data-i18n="skills.title">Skills</h2>
+
+  <div class="skills-grid">
+
+    <div class="card">HTML</div>
+    <div class="card">CSS</div>
+    <div class="card">JavaScript</div>
+    <div class="card">Bootstrap</div>
+    <div class="card">CompTIA Core 1</div>
+    <div class="card">CompTIA Core 2</div>
+    <div class="card" data-i18n="skills.troubleshooting">System Troubleshooting</div>
+    <div class="card" data-i18n="skills.hwsw">Hardware & Software Installation</div>
+
+  </div>
+
+</section>
+
+<section id="projects">
+
+  <h2 data-i18n="projects.title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <h3 data-i18n="project1.title">Movie Tracker</h3>
+      <p data-i18n="project1.desc">An advanced movie search application built with the TMDB API. Users can search for movies, explore detailed information including ratings, genres, and plot summaries, watch official trailers.</p>
+      <a href="https://rauf275.github.io/Movie-Tracker/" target="_blank" data-i18n="project.openBtn">Open Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3 data-i18n="project2.title">Notepad</h3>
+      <p data-i18n="project2.desc">A modern note-taking application that allows users to create, edit, pin, and delete notes with ease. The application provides an intuitive and responsive interface for organizing personal notes, ensuring quick access to important information.</p>
+      <a href="https://rauf275.github.io/Notepad/" target="_blank" data-i18n="project.openBtn">Open Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3 data-i18n="project3.title">Registration/Login</h3>
+      <p data-i18n="project3.desc">A responsive user authentication system with registration and login functionality powered by Local Storage. The application includes form validation, input restrictions for invalid characters, secure credential verification, and user-friendly error handling.</p>
+      <a href="https://rauf275.github.io/Registration-form/index.html" target="_blank" data-i18n="project.openBtn">Open Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3 data-i18n="project4.title">ABB Web-Site</h3>
+      <p data-i18n="project4.desc">A modern banking website built with HTML and CSS, featuring a clean and responsive design</p>
+      <a href="https://rauf275.github.io/ABB-Bank/" target="_blank" data-i18n="project.openBtn">Open Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3 data-i18n="project5.title">Code Academy Web-Site</h3>
+      <p data-i18n="project5.desc">A responsive website built with HTML and Bootstrap, featuring a clean and responsive design</p>
+      <a href="https://rauf275.github.io/Code-Academy/" target="_blank" data-i18n="project.openBtn">Open Project</a>
+    </div>
+
+    <div class="project-card">
+      <h3 data-i18n="project6.title">Mini-Shop (In Development)</h3>
+      <p data-i18n="project6.desc">A fully functional online store with an admin dashboard that allows administrators to manage the store, add, edit, and delete products, while providing users with registration, login, and a seamless shopping experience using Local Storage.</p>
+      <a href="https://rauf275.github.io/Mini-Shop/" target="_blank" data-i18n="project.openBtn">Open Project</a>
+    </div>
+
+
+  </div>
+
+</section>
+
+<section id="cv">
+
+  <h2 data-i18n="cv.title">CV</h2>
+
+  <div class="card">
+
+    <a href="cv.pdf" download class="btn" data-i18n="cv.btn">
+      Download CV
+    </a>
+
+  </div>
+
+</section>
+
+<section id="contact">
+
+  <h2 data-i18n="contact.title">Contact</h2>
+
+  <div class="card">
+
+    <p data-i18n="contact.email">Email: rauf.allahverdievv@mail.ru</p>
+    <p data-i18n="contact.phone">Phone: +994-70-203-43-05</p>
+
+    <a
+      href="https://github.com/Rauf275"
+      target="_blank"
+      class="btn"
+    >
+      GitHub
+    </a>
+
+  </div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>
